@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter Besi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="converter">
+        <h2>Konversi Besi</h2>
+        <label for="fromUnit">Dari:</label>
+        <select id="fromUnit">
+            <option value="d6">Diameter 6 mm</option>
+            <option value="d8">Diameter 8 mm</option>
+            <option value="d10">Diameter 10 mm</option>
+            <option value="d13">Diameter 13 mm</option>
+            <option value="d16">Diameter 16 mm</option>
+            <option value="d19">Diameter 19 mm</option>
+            <option value="d22">Diameter 22 mm</option>
+            <option value="d25">Diameter 25 mm</option>
+            <option value="d29">Diameter 29 mm</option>
+            <option value="d32">Diameter 32 mm</option>
+        </select>
+        <label for="mutuBesi">Mutu Besi</label>
+        <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi">
+        <label for="jarakBesi">Jarak Besi</label>
+        <input type="number" id="s_steel" placeholder="Masukkan Jarak Besi">
+        <h3></h3>
+        <label for="toUnit">Ke:</label>
+        <select id="toUnit">
+            <option value="d6">Diameter 6 mm</option>
+            <option value="d8">Diameter 8 mm</option>
+            <option value="d10">Diameter 10 mm</option>
+            <option value="d13">Diameter 13 mm</option>
+            <option value="d16">Diameter 16 mm</option>
+            <option value="d19">Diameter 19 mm</option>
+            <option value="d22">Diameter 22 mm</option>
+            <option value="d25">Diameter 25 mm</option>
+            <option value="d29">Diameter 29 mm</option>
+            <option value="d32">Diameter 32 mm</option>
+        </select>
+        <label for="mutuBesi">Mutu Besi</label>
+        <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi">
+        
+        <button onclick="convert()">Convert</button>
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" readonly>
+
+    </div>  
+
+    <script src="program.js"></script>
+</body>
+
+</html>
