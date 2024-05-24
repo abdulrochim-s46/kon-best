@@ -376,6 +376,6 @@ function convert(){
             break;
     }
 
-    document.getElementById('result').value = convertedValue.toFixed(2) + ' ' + resultUnit;
+    document.getElementById('result').value = convertedValue.toFixed(0) + ' ' + resultUnit;
     
 }
