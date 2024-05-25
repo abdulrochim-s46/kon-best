@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konverter Besi</title>
+    <title>Detailing Besi Struktur Beton</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,10 +24,17 @@
             <option value="d29">Diameter 29 mm</option>
             <option value="d32">Diameter 32 mm</option>
         </select>
-        <label for="mutuBesi">Mutu Besi</label>
-        <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi">
+        <select id="from_fy">
+            <option value="420 MPa">420 MPa</option>
+            <option value="500 MPa">500 MPa</option>
+            <option value="520 MPa">520 MPa</option>
+        </select>
+        <!-- <label for="from_mutuBesi">Mutu Besi</label>
+        <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi"> -->
+
         <label for="jarakBesi">Jarak Besi</label>
         <input type="number" id="s_steel" placeholder="Masukkan Jarak Besi">
+
         <h3></h3>
         <label for="toUnit">Ke:</label>
         <select id="toUnit">
@@ -42,10 +49,19 @@
             <option value="d29">Diameter 29 mm</option>
             <option value="d32">Diameter 32 mm</option>
         </select>
-        <label for="mutuBesi">Mutu Besi</label>
-        <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi">
+
+        <select id="to_fy">
+            <option value="420 MPa">420 MPa</option>
+            <option value="500 MPa">500 MPa</option>
+            <option value="520 MPa">520 MPa</option>
+        </select>
+
+        <!-- <label for="to_mutuBesi">Mutu Besi</label>
+        <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi"> -->
         
+        <h4></h4>
         <button onclick="convert()">Convert</button>
+        <h4></h4>
 
         <label for="result">Result:</label>
         <input type="text" id="result" readonly>
