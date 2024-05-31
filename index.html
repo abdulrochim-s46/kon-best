@@ -66,9 +66,37 @@
         <label for="result">Result:</label>
         <input type="text" id="result" readonly>
 
-    </div>  
+        <h4></h4>
+        <button onclick="hello()">Say_hello</button>
+        <input type="text" id="hello" readonly>
+        
+        <h4></h4>
+        <button onclick="Laporan()">Print_laporan</button>
+        <h4></h4>
+        <textarea id="textarea">
+            
+        </textarea>
+        <br>
+        <h4></h4>
+
+        <button type="button" onclick="saveStaticDataToFile()">Click to Save</button>
+        
+        <!-- <button type="button" onclick="CreateTextFile()">Create Text File</button>
+        <script>
+            function CreateTextFile(){
+                var blob = new Blob(["This is a sample file content."], {
+                    type: "text/plain;charset=utf-8",
+                });
+                saveAs(blob, "download.txt");
+            }
+        </script> -->
+
+
+    </div>
+
 
     <script src="program.js"></script>
 </body>
+
 
 </html>

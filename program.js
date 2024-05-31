@@ -1,12 +1,21 @@
-function convert(){
-    var fromUnit = document.getElementById('fromUnit').value;
-    var toUnit = document.getElementById('toUnit').value;
-    var from_fy = parseFloat(document.getElementById('from_fy').value);
-    var s_steel = parseFloat(document.getElementById('s_steel').value);
-    var to_fy = parseFloat(document.getElementById('to_fy').value);
+var fromUnit = document.getElementById('fromUnit').value;
+var toUnit = document.getElementById('toUnit').value;
+var from_fy = parseFloat(document.getElementById('from_fy').value);
+var s_steel = parseFloat(document.getElementById('s_steel').value);
+var to_fy = parseFloat(document.getElementById('to_fy').value);
 
-    var convertedValue;
-    var resultUnit;
+var convertedValue;
+var resultUnit;
+
+function convert(){
+    // var fromUnit = document.getElementById('fromUnit').value;
+    // var toUnit = document.getElementById('toUnit').value;
+    // var from_fy = parseFloat(document.getElementById('from_fy').value);
+    s_steel = parseFloat(document.getElementById('s_steel').value);
+    // var to_fy = parseFloat(document.getElementById('to_fy').value);
+
+    // var convertedValue;
+    // var resultUnit;
 
     // Perform conversion logic
 
@@ -378,4 +387,46 @@ function convert(){
 
     document.getElementById('result').value = convertedValue.toFixed(0) + ' ' + resultUnit;
     
+}
+
+function hello(){
+    document.getElementById('hello').value = "heloooooo";
+}
+
+function saveStaticDataToFile(){
+    // // Requiring fs module in which
+    // // writeFile function is defined.
+    // const fs = require('fs')
+
+    // // Data which will write in a file.
+    // let data = "Learning how to write in a file."
+
+    // // Write data in 'Output.txt' .
+    // fs.writeFile('Output.txt', data, (err) => {
+
+    //     // In case of a error throw err.
+    //     if (err) throw err;
+    // })
+
+    var blob = new Blob(["Welcome......!"],
+        { type: "text/plain;charset=utf-8"});
+    
+    
+    
+    // saveAs(blob, "static.txt");
+
+}
+
+function Laporan(){
+    // saveStaticDataToFile();
+    var textarea =
+    document.getElementById('textarea');
+    textarea.value = "Laporan Perhitungan\n"
+        +
+        "diameter = 10 mm\n"
+        +
+        "dikonversi menjadi diameter = 8 mm\n"
+        +
+        "hasil hitung = " + convertedValue.toFixed(0) + ' ' + resultUnit
+    ;
 }
