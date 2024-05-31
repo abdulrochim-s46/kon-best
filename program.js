@@ -413,7 +413,7 @@ function saveStaticDataToFile(){
     
     
     
-    // saveAs(blob, "static.txt");
+    saveAs(blob, "static.txt");
 
 }
 
