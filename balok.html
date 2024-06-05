@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailing Besi Struktur Beton</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <!-- <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/id/thumb/c/cc/PT_PP_logo.svg/1200px-PT_PP_logo.svg.png"></a> -->
+            <div class="nav-links" id="navLinks">
+                <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
+                    <li><a href="about.html" onclick="hideMenu()">ABOUT</a></li>
+                    <li><a href="pelat.html" onclick="hideMenu()">PELAT</a></li>
+                    <li><a href="balok.html" onclick="hideMenu()">BALOK</a></li>
+                    <li><a href="kolom.html" onclick="hideMenu()">KOLOM</a></li>
+                    <li><a href="contact.html" onclick="hideMenu()">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="converter">
+            <h2>Konversi Besi Balok</h2>
+            <label for="fromUnit">Dari:</label>
+            <select id="fromUnit">
+                <option value="d6">Diameter 6 mm</option>
+                <option value="d8">Diameter 8 mm</option>
+                <option value="d10">Diameter 10 mm</option>
+                <option value="d13">Diameter 13 mm</option>
+                <option value="d16">Diameter 16 mm</option>
+                <option value="d19">Diameter 19 mm</option>
+                <option value="d22">Diameter 22 mm</option>
+                <option value="d25">Diameter 25 mm</option>
+                <option value="d29">Diameter 29 mm</option>
+                <option value="d32">Diameter 32 mm</option>
+            </select>
+    
+            <label for="from_mutuBesi">Mutu Besi</label>
+            <select id="from_fy">
+                <option value="420 MPa">420 MPa</option>
+                <option value="500 MPa">500 MPa</option>
+                <option value="520 MPa">520 MPa</option>
+            </select>
+            <!-- <label for="from_mutuBesi">Mutu Besi</label>
+            <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi"> -->
+    
+            <label for="jarakBesi">Jumlah Besi (batang)</label>
+            <input type="number" id="n_steel" placeholder="Masukkan Jumlah Besi">
+            
+            <h3></h3>
+            <label for="toUnit">Ke:</label>
+            <select id="toUnit">
+                <option value="d6">Diameter 6 mm</option>
+                <option value="d8">Diameter 8 mm</option>
+                <option value="d10">Diameter 10 mm</option>
+                <option value="d13">Diameter 13 mm</option>
+                <option value="d16">Diameter 16 mm</option>
+                <option value="d19">Diameter 19 mm</option>
+                <option value="d22">Diameter 22 mm</option>
+                <option value="d25">Diameter 25 mm</option>
+                <option value="d29">Diameter 29 mm</option>
+                <option value="d32">Diameter 32 mm</option>
+            </select>
+    
+            <label for="to_mutuBesi">Mutu Besi</label>
+            <select id="to_fy">
+                <option value="420 MPa">420 MPa</option>
+                <option value="500 MPa">500 MPa</option>
+                <option value="520 MPa">520 MPa</option>
+            </select>
+    
+            <!-- <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi"> -->
+            
+            <button onclick="konversi_pelat()">Konversi</button>
+    
+            <label for="result">Result:</label>
+            <input type="text" id="result" readonly>
+            
+            <button onclick="Laporan()">Print_laporan</button>
+            
+            <textarea id="textarea">
+                
+            </textarea>
+            <br>
+    
+            <!-- <button type="button" onclick="saveStaticDataToFile()">Click to Save</button>
+            
+            <button type="button" onclick="CreateTextFile()">Create Text File</button>
+            <script>
+                function CreateTextFile(){
+                    var blob = new Blob(["This is a sample file content."], {
+                        type: "text/plain;charset=utf-8",
+                    });
+                    saveAs(blob, "download.txt");
+                }
+            </script> -->
+    
+    
+        </div>
+
+    </section>
+
+    <script src="script_balok.js"></script>
+</body>
+
+</html>
