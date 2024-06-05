@@ -145,7 +145,7 @@ button:hover{
 
 @media screen and (max-width:500px){
     .converter{
-        width: 90%;
+        width: 100%;
     }
 }
 
