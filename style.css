@@ -33,7 +33,7 @@ nav{
     align-content: center;
 }
 nav img{
-    width: 150px;
+    width: 100px;
 }
 .nav-links{
     flex: 1;
@@ -124,7 +124,7 @@ nav .fa{
 
 .nav-links ul li:hover .sub-menu-l ul li
 {
-    width: 150px;
+    width: 100px;
     padding: 10px;
     /* border: 1px dotted #fff; */
     background: transparent;
