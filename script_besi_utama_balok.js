@@ -1,24 +1,28 @@
+var steelType = document.getElementById('steelType').value;
 var fromUnit = document.getElementById('fromUnit').value;
 var toUnit = document.getElementById('toUnit').value;
 var from_fy = parseFloat(document.getElementById('from_fy').value);
 var n_steel = parseFloat(document.getElementById('n_steel').value);
+var s_steel = parseFloat(document.getElementById('s_steel').value);
 var to_fy = parseFloat(document.getElementById('to_fy').value);
 
 var convertedValue;
-var resultUnit = ' batang';
+var resultUnit = '';
 
-function konversi_kolom(){
+function konversi_balok(){
+    steelType = document.getElementById('steelType').value;
     fromUnit = document.getElementById('fromUnit').value;
     toUnit = document.getElementById('toUnit').value;
     from_fy = parseFloat(document.getElementById('from_fy').value);
     n_steel = parseFloat(document.getElementById('n_steel').value);
+    s_steel = parseFloat(document.getElementById('s_steel').value);
     to_fy = parseFloat(document.getElementById('to_fy').value);
 
     // var convertedValue;
     // var resultUnit;
 
     // Perform conversion logic
-
+    resultUnit = ' batang';
     switch (fromUnit){
         case 'd6':
             if (toUnit === 'd8'){
@@ -280,9 +284,7 @@ function konversi_kolom(){
             }
         break;
     }
-
     document.getElementById('result').value = convertedValue.toFixed(0) + ' ' + resultUnit;
-    
 }
 
 function hello(){

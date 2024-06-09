@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 120vh;
         margin: 0;
         background: linear-gradient(to right, #3494e6, #ffff00);
     }
@@ -17,10 +17,10 @@
 }
 
 .header{
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),
-    url("images/RSUP Kupang Design.png");
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
+    /* url("images/RSUP Kupang Design.png"); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -58,7 +58,7 @@ nav img{
     background: #f44336;
     display: block;
     margin: auto;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 .nav-links ul li:hover::after{
     width: 100%;
@@ -77,10 +77,10 @@ nav img{
 }
 .text-box p{
     margin: 10px 0 40px; /* from top left bottom */
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
 }
-.hero-btn{
+/* .hero-btn{
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -95,9 +95,52 @@ nav img{
     border: 1px solid #f44366;
     background: #f44366;
     transition: 1s;
-}
+} */
+
 nav .fa{
     display: none;
+    /* margin-right: 8px; */
+}
+
+.sub-menu-l
+{
+    display: none;
+}
+
+.nav-links ul li:hover .sub-menu-l
+{
+    display: block;
+    position: absolute;
+    background: rgb(116, 123, 20);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.nav-links ul li:hover .sub-menu-l ul
+{
+    display: block;
+    margin: 10px;
+}
+
+.nav-links ul li:hover .sub-menu-l ul li
+{
+    width: 150px;
+    padding: 10px;
+    /* border: 1px dotted #fff; */
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.nav-links ul li:hover .sub-menu-l ul li:last-child
+{
+    border-top: none;
+    /* border-bottom: none; */
+}
+
+.nav-links ul li:hover .sub-menu-l ul li a:hover
+{
+    color: #13140e;
 }
 
 .converter{
@@ -109,6 +152,7 @@ nav .fa{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 select, input{
     width: 100%;
     padding: 10px;
@@ -200,11 +244,12 @@ button:hover{
 .footer{
     width: 100%;
     text-align: center;
+    color: #fff;
     padding: 30px 0;
 }
 .footer h4{
     margin-bottom: 25px;
-    margin-top: 20px;
+    margin-top: 150px;
     font-weight: 600;
 }
 
@@ -221,7 +266,7 @@ button:hover{
 
 /* ----icons_abdul---- */
 .icons_abdul .fa{
-    color: blue;
+    color: rgb(161, 230, 24);
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
