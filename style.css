@@ -114,15 +114,15 @@ nav .fa{
 {
     display: block;
     position: absolute;
-    background: rgb(116, 123, 20);
-    margin-top: 15px;
+    background: rgb(56, 69, 29);
+    margin-top: 5px;
     margin-left: -15px;
 }
 
 .nav-links ul li:hover .sub-menu-l ul
 {
-    display: block;
-    margin: 10px;
+    display: inline-flexbox;
+    margin: auto;
 }
 
 .nav-links ul li:hover .sub-menu-l ul li
