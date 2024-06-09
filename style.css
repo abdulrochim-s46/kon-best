@@ -77,11 +77,11 @@ nav img{
     text-align: center;
 }
 .text-box h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 .text-box p{
     margin: 10px 0 40px; /* from top left bottom */
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
 }
 /* .hero-btn{
