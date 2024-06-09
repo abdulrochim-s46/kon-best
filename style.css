@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
 }
 
 .header{
@@ -23,7 +24,7 @@
     /* url("images/RSUP Kupang Design.png"); */
     background-position: center;
     background-size: cover;
-    position: fixed;
+    position: relative;
 }
 
 nav{
@@ -41,8 +42,10 @@ nav img{
 }
 .nav-links ul li{
     list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
+    display: inline-flex;
+    width: 70px;
+    /* margin: 15px; */
+    padding: 15px;
     position: relative;
 }
 .nav-links ul li a{
@@ -145,7 +148,7 @@ nav .fa{
 
 .converter{
     text-align: center;
-    max-width: 200px;
+    max-width: 300px;
     margin: auto;
     padding: 50px;
     background-color: #ffffff;
