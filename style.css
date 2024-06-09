@@ -33,19 +33,20 @@ nav{
     justify-content: space-between;
     align-content: center;
 }
+
 nav img{
     width: 100px;
 }
 .nav-links{
-    flex: 1;
-    text-align: left;
+    flex: 5;
+    text-align: right;
 }
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    width: 70px;
-    /* margin: 15px; */
-    padding: 15px;
+    width: 50px;
+    margin: 2px;
+    padding: 5px;
     position: relative;
 }
 .nav-links ul li a{
