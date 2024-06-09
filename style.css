@@ -46,7 +46,7 @@ nav img{
     width: 70px;
     /* margin: 15px; */
     padding: 15px;
-    position: relative;
+    position: static;
 }
 .nav-links ul li a{
     color: #fff;
