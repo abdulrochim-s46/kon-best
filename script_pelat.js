@@ -395,10 +395,6 @@ function konversi_pelat(){
     
 }
 
-function hello(){
-    document.getElementById('hello').value = "heloooooo";
-}
-
 function saveStaticDataToFile(){
     // // Requiring fs module in which
     // // writeFile function is defined.

@@ -285,10 +285,6 @@ function konversi_kolom(){
     
 }
 
-function hello(){
-    document.getElementById('hello').value = "heloooooo";
-}
-
 function saveStaticDataToFile(){
     // // Requiring fs module in which
     // // writeFile function is defined.

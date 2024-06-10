@@ -181,7 +181,7 @@ button:hover{
 }
 
 #result{
-    width: 95%;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
@@ -211,7 +211,7 @@ button:hover{
 }
 
 #s_steel{
-    width: 95%;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;

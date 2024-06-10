@@ -1,20 +1,22 @@
-var steelType = document.getElementById('steelType').value;
+// var steelType = document.getElementById('steelType').value;
 var fromUnit = document.getElementById('fromUnit').value;
 var toUnit = document.getElementById('toUnit').value;
 var from_fy = parseFloat(document.getElementById('from_fy').value);
-var n_steel = parseFloat(document.getElementById('n_steel').value);
+var n_steel_From = parseFloat(document.getElementById('n_steel_From').value);
+var n_steel_To = parseFloat(document.getElementById('n_steel_To').value);
 var s_steel = parseFloat(document.getElementById('s_steel').value);
 var to_fy = parseFloat(document.getElementById('to_fy').value);
 
 var convertedValue;
 var resultUnit = '';
 
-function konversi_balok(){
-    steelType = document.getElementById('steelType').value;
+function konversi_besi_sengkang_balok(){
+    // steelType = document.getElementById('steelType').value;
     fromUnit = document.getElementById('fromUnit').value;
     toUnit = document.getElementById('toUnit').value;
     from_fy = parseFloat(document.getElementById('from_fy').value);
-    n_steel = parseFloat(document.getElementById('n_steel').value);
+    n_steel_From = parseFloat(document.getElementById('n_steel_From').value);
+    n_steel_To = parseFloat(document.getElementById('n_steel_To').value);
     s_steel = parseFloat(document.getElementById('s_steel').value);
     to_fy = parseFloat(document.getElementById('to_fy').value);
 
@@ -26,270 +28,267 @@ function konversi_balok(){
     switch (fromUnit){
         case 'd6':
             if (toUnit === 'd8'){
-                convertedValue = 1. / (6. * 6. * n_steel * from_fy) /  (8. * 8. * to_fy) * s_steel
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) * (8. * 8. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd10'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) * (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd6' && to_fy != from_fy){
-                convertedValue = 6. * 6. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd8':
             if (toUnit === 'd6'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd10'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd8' && to_fy != from_fy){
-                convertedValue = 8. * 8. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd10':
             if (toUnit === 'd6'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10' && to_fy != from_fy){
-                convertedValue = 10. * 10. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd13':
             if (toUnit === 'd6'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13' && to_fy != from_fy){
-                convertedValue = 13. * 13. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd16':
             if (toUnit === 'd6'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16' && to_fy != from_fy){
-                convertedValue = 16. * 16. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd19':
             if (toUnit === 'd6'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19' && to_fy != from_fy){
-                convertedValue = 19. * 19. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd22':
             if (toUnit === 'd6'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22' && to_fy != from_fy){
-                convertedValue = 22. * 22. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd25':
             if (toUnit === 'd6'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25' && to_fy != from_fy){
-                convertedValue = 25. * 25. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd29':
             if (toUnit === 'd6'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32'){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29' && to_fy != from_fy){
-                convertedValue = 29. * 29. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
 
         case 'd32':
             if (toUnit === 'd6'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (6. * 6. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             } else if (toUnit === 'd8'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (8. * 8. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (10. * 10. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (13. * 13. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (16. * 16. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (19. * 19. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (22. * 22. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (25. * 25. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29'){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (29. * 29. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32' && to_fy != from_fy){
-                convertedValue = 32. * 32. * n_steel * from_fy /  (32. * 32. * to_fy)
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel;
+                convertedValue = n_steel_From;
             }
         break;
     }
-    document.getElementById('result').value = convertedValue.toFixed(0) + ' ' + resultUnit;
+    document.getElementById('result_sengkang_balok').value = convertedValue.toFixed(0) + ' ' + resultUnit;
 }
 
-function hello(){
-    document.getElementById('hello').value = "heloooooo";
-}
 
 function saveStaticDataToFile(){
     // // Requiring fs module in which
