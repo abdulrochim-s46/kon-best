@@ -47,8 +47,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd6' && to_fy != from_fy){
                 convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd6' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (6. * 6. * n_steel_From * from_fy) *  (6. * 6. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -73,8 +75,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd8' && to_fy != from_fy){
                 convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd8' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (8. * 8. * n_steel_From * from_fy) *  (8. * 8. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -99,8 +103,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd10' && to_fy != from_fy){
                 convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd10' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (10. * 10. * n_steel_From * from_fy) *  (10. * 10. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -125,8 +131,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd13' && to_fy != from_fy){
                 convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd13' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (13. * 13. * n_steel_From * from_fy) *  (13. * 13. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -151,8 +159,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd16' && to_fy != from_fy){
                 convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd16' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (16. * 16. * n_steel_From * from_fy) *  (16. * 16. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -177,8 +187,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd19' && to_fy != from_fy){
                 convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd19' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (19. * 19. * n_steel_From * from_fy) *  (19. * 19. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -203,8 +215,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd22' && to_fy != from_fy){
                 convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd22' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (22. * 22. * n_steel_From * from_fy) *  (22. * 22. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -229,8 +243,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd25' && to_fy != from_fy){
                 convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd25' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (25. * 25. * n_steel_From * from_fy) *  (25. * 25. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -255,8 +271,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd29' && to_fy != from_fy){
                 convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd29' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (29. * 29. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
 
@@ -281,8 +299,10 @@ function konversi_besi_sengkang_balok(){
                 convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (29. * 29. * n_steel_To * to_fy) * s_steel
             }else if (toUnit === 'd32' && to_fy != from_fy){
                 convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
+            }else if (toUnit === 'd32' && n_steel_From != n_steel_To){
+                convertedValue = 1./ (32. * 32. * n_steel_From * from_fy) *  (32. * 32. * n_steel_To * to_fy) * s_steel
             }else{
-                convertedValue = n_steel_From;
+                convertedValue = s_steel;
             }
         break;
     }
