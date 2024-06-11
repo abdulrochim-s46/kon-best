@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konversi Besi Beton Struktur</title>
+    <title>Kon-Best "Konversi Besi Beton Struktur"</title>
     <link rel="stylesheet" href="style.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,7 +25,7 @@
                 <ul>
                     <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
                     <!-- <li><a href="about.html" onclick="hideMenu()">ABOUT</a></li> -->
-                    <li><a href="pelat.html" onclick="hideMenu()">PELAT</a></li>
+                    <li><a href="besi_pelat.html" onclick="hideMenu()">PELAT</a></li>
                     <li><a href="#"><i class="fa fa-user"></i> BALOK</a>
                         <div class="sub-menu-l">
                             <ul>
@@ -27,8 +34,15 @@
                             </ul>
                         </div>    
                     </li>
-                    <li><a href="kolom.html" onclick="hideMenu()">KOLOM</a></li>
-                    <li><a href="contact.html" onclick="hideMenu()">CONTACT</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> KOLOM</a>
+                        <div class="sub-menu-l">
+                            <ul>
+                                <li><a href="besi_sengkang_kolom.html" onclick="hideMenu()">BESI SENGKANG</a></li>
+                                <li><a href="besi_utama_kolom.html" onclick="hideMenu()">BESI UTAMA</a></li>
+                            </ul>
+                        </div>    
+                    </li>
+                    <li><a href="kontak.html" onclick="hideMenu()">KONTAK</a></li>
                 </ul>
             </div>
             <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
@@ -105,24 +119,37 @@
             <input type="text" id="result_sengkang_balok" readonly>
             <h6>*keterangan: jarak bersih tulangan tidak boleh lebih kecil dari 25mm dan 1.5 ukuran batu pecah.</h6><br>
             
-            <!-- <button onclick="Laporan()">Print_laporan</button>
+            <!-- View Laporan dan Download -->
+            <button onclick="Laporan()">Tampilkan Laporan</button>
+            <textarea id="textarea" required placeholder="Tampilkan Laporan sebelum Mengunduh"></textarea>
             
-            <textarea id="textarea">
-                
-            </textarea> -->
-            <br>
-    
-            <!-- <button type="button" onclick="saveStaticDataToFile()">Click to Save</button>
-            
-            <button type="button" onclick="CreateTextFile()">Create Text File</button>
-            <script>
-                function CreateTextFile(){
-                    var blob = new Blob(["This is a sample file content."], {
-                        type: "text/plain;charset=utf-8",
-                    });
-                    saveAs(blob, "download.txt");
-                }
-            </script> -->
+            <!-- https://www.youtube.com/watch?v=fAgLnRVHp_I&t=425s -->
+            <div class="file-options">
+                <div class="option file-name">
+                    <label>Nama Dokumen</label>
+                    <input type="text" id="file_name" placeholder="Masukkan Nama File">
+                </div>
+                <div class="option save-as">
+                    <label>Simpan sebagai</label>
+                    <div class="select-menu">
+                        <select id="file_extension">
+                            <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types -->
+                            <option value="text/plain">Dokumen Text (.txt)</option>
+                            <option value="application/msword">Dokumen Word (.doc)</option>
+                            <!-- <option value="aapplication/pdf">Dokumen PDF (.pdf)</option> -->
+                            <!-- <option value="image/jpeg">Dokumen JPEG (.jpg)</option> -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- https://www.tutorialspoint.com/how-to-create-and-save-text-file-in-javascript -->
+            <!-- <h2> Create a text file and save it to a local computer using JavaScript. </h2>
+            <p> Enter the file content:- </p> -->
+            <!-- <textarea> </textarea> -->
+            <br/>
+            <!-- <button class="save-btn" onclick = "downloadFile()"> Menyimpan File Laporan </button> -->
+            <button class="save-btn"> Menyimpan File Laporan </button>
+            <script src="script.js"> </script>
     
     
         </div>

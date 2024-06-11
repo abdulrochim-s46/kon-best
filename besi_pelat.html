@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="index.html" onclick="hideMenu()">HOME</a></li>
                     <!-- <li><a href="about.html" onclick="hideMenu()">ABOUT</a></li> -->
-                    <li><a href="besi_pelat.html" onclick="hideMenu()">PELAT</a></li>
+                <li><a href="besi_pelat.html" onclick="hideMenu()">PELAT</a></li>
                     <li><a href="#"><i class="fa fa-user"></i> BALOK</a>
                         <div class="sub-menu-l">
                             <ul>
@@ -48,9 +48,9 @@
             <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        
+    
         <div class="converter">
-            <h2>Konversi Besi Utama Balok</h2>
+            <h2>Konversi Besi Pelat</h2>
             <label for="fromUnit">Dari:</label>
             <select id="fromUnit">
                 <option value="d6">Diameter 6 mm</option>
@@ -74,8 +74,8 @@
             <!-- <label for="from_mutuBesi">Mutu Besi</label>
             <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi"> -->
     
-            <label for="jumlahBesi">Jumlah Besi (batang)</label>
-            <input type="number" id="n_steel" placeholder="Masukkan Jumlah Besi">
+            <label for="jarakBesi">Jarak Besi (mm)</label>
+            <input type="number" id="s_steel" placeholder="Masukkan Jarak Besi">
             
             <h3></h3>
             <label for="toUnit">Konversi Ke:</label>
@@ -101,12 +101,13 @@
     
             <!-- <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi"> -->
             
-            <button onclick="konversi_besi_utama_balok()">Konversi</button>
-    
-            <label for="result_besi_utama_balok">Result:</label>
-            <input type="text" id="result_besi_utama_balok" readonly>
-            <h6>*keterangan: jarak bersih tulangan tidak boleh lebih kecil dari 25mm dan 1.5 ukuran batu pecah.</h6><br>
+            <button onclick="konversi_pelat()">Konversi</button>
             
+            <label for="result">Hasil Konversi (*):</label>
+            <input type="text" id="result" readonly>
+            <h6>* jarak tulangan tidak boleh lebih besar dari 2 kali tebal pelat dan 450mm.</h6><br>
+
+
             <!-- View Laporan dan Download -->
             <button onclick="Laporan()">Tampilkan Laporan</button>
             <textarea id="textarea" required placeholder="Tampilkan Laporan sebelum Mengunduh"></textarea>
@@ -138,13 +139,16 @@
             <!-- <button class="save-btn" onclick = "downloadFile()"> Menyimpan File Laporan </button> -->
             <button class="save-btn"> Menyimpan File Laporan </button>
             <script src="script.js"> </script>
-    
-    
+
+
+
         </div>
 
     </section>
 
-    <script src="script_besi_utama_balok.js"></script>
+    <script src="script_besi_pelat.js"></script>
+    <!-- <script src="script.js"> </script> -->
+
 </body>
 
 </html>

@@ -50,7 +50,12 @@
         </nav>
         
         <div class="converter">
-            <h2>Konversi Besi Utama Balok</h2>
+            <h2>Konversi Besi Sengkang Kolom</h2>
+            <!-- <label for="steelType">Jenis Besi:</label>
+            <select id="steelType">
+                <option value="trans_reinforcement">Besi Sengkang</option>
+                <option value="long_reinforcement">Besi Utama</option>
+            </select> -->
             <label for="fromUnit">Dari:</label>
             <select id="fromUnit">
                 <option value="d6">Diameter 6 mm</option>
@@ -73,10 +78,13 @@
             </select>
             <!-- <label for="from_mutuBesi">Mutu Besi</label>
             <input type="number" id="from_fy" placeholder="Masukkan Mutu Besi"> -->
-    
-            <label for="jumlahBesi">Jumlah Besi (batang)</label>
-            <input type="number" id="n_steel" placeholder="Masukkan Jumlah Besi">
-            
+
+            <label for="jumlahBesi">Jumlah Kaki</label>
+            <input type="number" id="n_steel_From" placeholder="Masukkan Jumlah Kaki">
+
+            <label for="jarakBesi">Jarak Besi (mm)</label>
+            <input type="number" id="s_steel" placeholder="Masukkan Jarak Sengkang">
+
             <h3></h3>
             <label for="toUnit">Konversi Ke:</label>
             <select id="toUnit">
@@ -91,20 +99,24 @@
                 <option value="d29">Diameter 29 mm</option>
                 <option value="d32">Diameter 32 mm</option>
             </select>
-    
+            
+
             <label for="to_mutuBesi">Mutu Besi</label>
             <select id="to_fy">
                 <option value="420 MPa">420 MPa</option>
                 <option value="500 MPa">500 MPa</option>
                 <option value="520 MPa">520 MPa</option>
             </select>
-    
+            
             <!-- <input type="number" id="to_fy" placeholder="Masukkan Mutu Besi"> -->
             
-            <button onclick="konversi_besi_utama_balok()">Konversi</button>
+            <label for="jumlahBesi">Jumlah Kaki</label>
+            <input type="number" id="n_steel_To" placeholder="Masukkan Jumlah Kaki">
+
+            <button onclick="konversi_sengkang_kolom()">Konversi</button>
     
-            <label for="result_besi_utama_balok">Result:</label>
-            <input type="text" id="result_besi_utama_balok" readonly>
+            <label for="result_sengkang_kolom">Result:</label>
+            <input type="text" id="result_sengkang_kolom" readonly>
             <h6>*keterangan: jarak bersih tulangan tidak boleh lebih kecil dari 25mm dan 1.5 ukuran batu pecah.</h6><br>
             
             <!-- View Laporan dan Download -->
@@ -144,7 +156,7 @@
 
     </section>
 
-    <script src="script_besi_utama_balok.js"></script>
+    <script src="script_sengkang_kolom.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 120vh;
+        height: 160vh;
         margin: 0;
         background: linear-gradient(to right, #3494e6, #ffff00);
     }
@@ -18,7 +18,7 @@
 }
 
 .header{
-    min-height: 120vh;
+    min-height: 160vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
     /* url("images/RSUP Kupang Design.png"); */
@@ -84,6 +84,7 @@ nav img{
     font-size: 20px;
     color: #fff;
 }
+
 /* .hero-btn{
     display: inline-block;
     text-decoration: none;
@@ -174,10 +175,12 @@ button{
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 button:hover{
     background-color: #45a049;
+    font-size: 17px;
 }
 
 #result{
@@ -238,11 +241,44 @@ button:hover{
     outline: none;
     border: 1px solid #ccc;
     border-radius: 5px;
+    /* margin-left: 0px; */
 }
 
 .converter textarea{
-    height: 60px;
+    height: 100px;
 } 
+
+.converter h6{
+    text-align: left;
+    font-size: 10px;
+    /* padding-left: 10px; */
+}
+
+.converter .file-options{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-options .option{
+    width: calc(100% / 2 - 8px);
+}
+
+.converter .save-btn{
+    /* color: #fff; */
+    margin-top: 0;
+    padding: 10px 0;
+    /* background: #09c272; */
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.converter textarea:valid ~ .save-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
 
 /* ----footer---- */
 .footer{
@@ -272,7 +308,7 @@ button:hover{
 
 /* ----icons_abdul---- */
 .icons_abdul .fa{
-    color: rgb(161, 230, 24);
+    color: rgb(253, 253, 0);
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;

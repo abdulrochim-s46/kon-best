@@ -7,7 +7,7 @@ var to_fy = parseFloat(document.getElementById('to_fy').value);
 var convertedValue;
 var resultUnit = ' batang';
 
-function konversi_besi_utama_balok(){
+function konversi_besi_utama_kolom(){
     fromUnit = document.getElementById('fromUnit').value;
     toUnit = document.getElementById('toUnit').value;
     from_fy = parseFloat(document.getElementById('from_fy').value);
@@ -281,8 +281,7 @@ function konversi_besi_utama_balok(){
         break;
     }
 
-    // document.getElementById('result_besi_utama_balok').value = convertedValue.toFixed(0) + ' ' + resultUnit;
-    document.getElementById('result_besi_utama_balok').value = Math.ceil(convertedValue) + ' ' + resultUnit;
+    document.getElementById('result_besi_utama_kolom').value = Math.ceil(convertedValue) + ' ' + resultUnit;
     
 }
 
