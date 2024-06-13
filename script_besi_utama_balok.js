@@ -318,6 +318,6 @@ function Laporan(){
         +
         "dikonversi menjadi diameter = 8 mm\n"
         +
-        "hasil hitung = " + convertedValue.toFixed(0) + ' ' + resultUnit
+        "hasil hitung = " + Math.ceil(convertedValue) + ' ' + resultUnit
     ;
 }

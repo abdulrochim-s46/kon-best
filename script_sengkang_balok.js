@@ -306,7 +306,7 @@ function konversi_besi_sengkang_balok(){
             }
         break;
     }
-    document.getElementById('result_sengkang_balok').value = convertedValue.toFixed(0) + ' ' + resultUnit;
+    document.getElementById('result_sengkang_balok').value = Math.floor(convertedValue) + ' ' + resultUnit;
 }
 
 
@@ -342,6 +342,6 @@ function Laporan(){
         +
         "dikonversi menjadi diameter = 8 mm\n"
         +
-        "hasil hitung = " + convertedValue.toFixed(0) + ' ' + resultUnit
+        "hasil hitung = " + Math.floor(convertedValue) + ' ' + resultUnit
     ;
 }
