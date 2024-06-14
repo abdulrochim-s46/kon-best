@@ -199,9 +199,9 @@ button:hover{
         width: 100%;
     }
     .nav-links ul li{
-        width: 20px;
+        width: 10px;
         margin: 2px;
-        padding: 5px;
+        padding: 2px;
     }
 }
 
