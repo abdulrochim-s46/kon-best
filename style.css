@@ -44,8 +44,8 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    width: 35px;
-    margin: 8px;
+    /* width: 35px;
+    margin: 8px; */
     padding: 5px;
     position: relative;
 }
@@ -62,7 +62,7 @@ nav img{
     background: #f44336;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 .nav-links ul li:hover::after{
     width: 100%;
