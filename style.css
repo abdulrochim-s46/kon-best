@@ -44,8 +44,8 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    width: 40px;
-    margin: 5px;
+    width: 35px;
+    margin: 8px;
     padding: 5px;
     position: relative;
 }
