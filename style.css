@@ -44,9 +44,9 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    width: 33px;
-    margin: 7px;
-    padding: 7px;
+    width: 30px;
+    margin: 5px;
+    padding: 5px;
     position: relative;
 }
 .nav-links ul li a{
