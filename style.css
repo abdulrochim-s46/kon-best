@@ -35,7 +35,7 @@ nav{
 }
 
 nav img{
-    width: 150px;
+    width: 100px;
 }
 .nav-links{
     flex: 5;
@@ -44,9 +44,9 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    /* width: 35px;
-    margin: 8px; */
-    padding: 5px;
+    width: 35px;
+    margin: 8px;
+    padding: 8px;
     position: relative;
 }
 .nav-links ul li a{
